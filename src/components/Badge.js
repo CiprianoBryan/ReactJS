@@ -16,11 +16,11 @@ class Badge extends React.Component {
                         src={confLogo} 
                         alt="Avatar"/>
                     <h1>
-                        Bryan <br/> Cipriano</h1>
+                        {this.props.firstName} <br/> {this.props.lastName}</h1>
                 </div>
                 <div className="Badge__section-info">
-                    <h3>Backend Engineer</h3>
-                    <div>@ciprianobryan</div>
+                    <h3>{this.props.jobTitle}</h3>
+                    <div>@{this.props.twitter}</div>
                 </div>
                 <div className="Badge__footer">
                     #platziconf
