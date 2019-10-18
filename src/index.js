@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const element = <h1>Hello, Platzi Badges</h1>;
+const jsx = (
+    <div>
+        <h1>Hola, soy Bryan</h1>
+        <p>Soy ingeniero Backend.</p>
+    </div>
+);
 const container = document.getElementById('app');
 
-ReactDOM.render(element, container);
+ReactDOM.render(jsx, container);
