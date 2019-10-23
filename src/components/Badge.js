@@ -14,7 +14,7 @@ class Badge extends React.Component {
                 <div className="Badge__section-name">
                     <img
                         className="Badge__avatar" 
-                        src={this.props.avatarUrl} 
+                        src="https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon"
                         alt="Avatar"/>
                     <h1>
                         {this.props.firstName} <br/> {this.props.lastName}
