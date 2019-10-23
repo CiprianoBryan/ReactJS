@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Navbar from '../components/Navbar';
 import BadgeListElement from '../components/BadgeListElement';
 
 import './styles/BadgeList.css';
@@ -43,7 +42,6 @@ class BadgeList extends React.Component {
     render() {
         return (
             <div>
-                <Navbar/>
                 <div className="Badges">
                     <div className="Badges__hero">
                         <div className="Badges__container">
