@@ -7,7 +7,11 @@ import './styles/BadgeList.css';
 import confLogo from '../images/badge-header.svg';
 
 class BadgeList extends React.Component {
-    state = {
+    constructor(props) {
+        super(props);
+        console.log('1. constructor()');
+
+        this.state = {
         data: [
             {
                 id: '2de30c42-9deb-40fc-a41f-05e62b5939a7',
@@ -38,8 +42,14 @@ class BadgeList extends React.Component {
             }
         ]
     };
+    }
+
+    componentDidMount() {
+        console.log('3. componentDidMount()');
+    }
 
     render() {
+        console.log('2. render()');
         return (
             <div>
                 <div className="Badges">
