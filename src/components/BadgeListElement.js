@@ -24,7 +24,7 @@ class BadgeListItem extends React.Component {
 
 class BadgeListElements extends React.Component {
 	render() {
-		if (this.props.badges.length == 0) {
+		if (this.props.badges.length === 0) {
 			return (
 				<div>
 					<h3>No badge were found</h3>

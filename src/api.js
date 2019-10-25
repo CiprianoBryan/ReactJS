@@ -26,28 +26,28 @@ const api = {
 			return callApi('/badges');
 		},
 		create(badge) {
-	  // throw new Error('500: Server error');
-	return callApi(`/badges`, {
-			method: 'POST',
-			body: JSON.stringify(badge),
-		});
+		// throw new Error('500: Server error');
+			return callApi(`/badges`, {
+				method: 'POST',
+				body: JSON.stringify(badge),
+			});
+		},
+		read(badgeId) {
+			return callApi(`/badges/${badgeId}`);
+		},
+		update(badgeId, updates) {
+			return callApi(`/badges/${badgeId}`, {
+				method: 'PUT',
+				body: JSON.stringify(updates),
+			});
+		},
+		// Lo hubiera llamado `delete`, pero `delete` es un keyword en JavaScript asi que no es buena idea :P
+		remove(badgeId) {
+			return callApi(`/badges/${badgeId}`, {
+				method: 'DELETE',
+			});
+		},
 	},
-	read(badgeId) {
-		return callApi(`/badges/${badgeId}`);
-	},
-	update(badgeId, updates) {
-		return callApi(`/badges/${badgeId}`, {
-			method: 'PUT',
-			body: JSON.stringify(updates),
-		});
-	},
-	// Lo hubiera llamado `delete`, pero `delete` es un keyword en JavaScript asi que no es buena idea :P
-	remove(badgeId) {
-		return callApi(`/badges/${badgeId}`, {
-			method: 'DELETE',
-		});
-	},
-  },
 };
 
 export default api;
