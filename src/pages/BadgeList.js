@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import BadgeListElement from '../components/BadgeListElement';
 import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
+import LoaderThreePoints from '../components/LoaderThreePoints';
 import api from '../api';
 
 import './styles/BadgeList.css';
@@ -18,6 +19,11 @@ class BadgeList extends React.Component {
 
 	componentDidMount() {
 		this.fetchData();
+		this.intervalId = setInterval(this.fetchData, 5000);
+	}
+
+	componentWillUnmount() {
+		clearInterval(this.intervalId);
 	}
 
 	fetchData = async () => {
@@ -40,7 +46,7 @@ class BadgeList extends React.Component {
 	}
 
 	render() {
-		if (this.state.loading) {
+		if (this.state.loading && !this.state.data) {
 			return <PageLoading/>;
 		}
 		if (this.state.error) {
@@ -62,6 +68,7 @@ class BadgeList extends React.Component {
 						</Link>
 					</div>
 					<BadgeListElement badges={this.state.data}/>
+					{this.state.loading && <LoaderThreePoints/>}
 				</div>
 			</React.Fragment>
 		);
