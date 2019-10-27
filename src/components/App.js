@@ -4,7 +4,7 @@ import BadgeNew from '../pages/BadgeNew';
 import BadgeList from '../pages/BadgeList';
 import BadgeHome from '../pages/BadgeHome';
 import BadgeEdit from '../pages/BadgeEdit';
-import BadgeDetails from '../pages/BadgeDetails';
+import BadgeDetails from '../pages/BadgeDetailsContainer';
 import Layout from './Layout';
 import NotFound from '../pages/NotFound';
 
